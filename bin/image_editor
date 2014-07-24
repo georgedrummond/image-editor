@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require './lib/custom_editor'
+
+custom_editor = CustomEditor.new
+custom_editor.commands(ARGV[0])
+
+custom_editor.run_commands!
