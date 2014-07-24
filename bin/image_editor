@@ -2,7 +2,11 @@
 
 require './lib/custom_editor'
 
-custom_editor = CustomEditor.new
-custom_editor.commands(ARGV[0])
+if ARGV.any?
+  custom_editor = CustomEditor.new
+  custom_editor.commands(ARGV[0])
 
-custom_editor.run_commands!
+  custom_editor.run_commands!
+else
+  puts "Please enter image commands e.g. '>I56 >L23A >S'"
+end
